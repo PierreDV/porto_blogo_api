@@ -10,8 +10,8 @@ RSpec.describe UsersController, type: :controller do
 
   describe '#show' do
     it 'returns the correct status code' do
-      fred = User.create!(email: 'fred@hotmail.com')
-      get :show, params: { id: fred.id }
+      user = create(:user)
+      get :show, params: { id: user.id }
       expect(response.status).to eq(200)
     end
   end
