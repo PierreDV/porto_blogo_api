@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    render json: { status: :ok }
+    render json: { status: :ok, message: 'test message 666' }
   end
 
 end
